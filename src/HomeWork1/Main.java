@@ -47,11 +47,12 @@ public class Main {
         return i;
     }
     public static void main(String[] args) {
+        //1
         int[] mas={2,5,4,3,1};
         printMas(mas);
         bubbleSorter(mas);
         printMas(mas);
-        System.out.println("Искомый элемент под индексом " + binSearch(mas,5));
+        System.out.println("Искомый элемент под индексом " + binSearch(mas,3));
 
 
     }
