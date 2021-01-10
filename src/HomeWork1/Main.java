@@ -54,6 +54,9 @@ public class Main {
         printMas(mas);
         System.out.println("Искомый элемент под индексом " + binSearch(mas,3));
 
-
+        //2
+        Circle c1=new Circle(10,10,5);
+        c1.showInfo();
+        c1.showInfo();
     }
 }
