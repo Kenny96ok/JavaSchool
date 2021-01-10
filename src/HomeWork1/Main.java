@@ -53,6 +53,6 @@ public class Main {
         printMas(mas);
         System.out.println("Искомый элемент под индексом " + binSearch(mas,5));
 
-        System.out.println("");
+
     }
 }
