@@ -52,5 +52,7 @@ public class Main {
         bubbleSorter(mas);
         printMas(mas);
         System.out.println("Искомый элемент под индексом " + binSearch(mas,5));
+
+        System.out.println("");
     }
 }
