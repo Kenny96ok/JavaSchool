@@ -14,6 +14,11 @@ public class Circle extends Shape{
         this.R=R;
     }
     @Override
+    public double square()
+    {
+        return 2*(3.1415)*R*R;
+    }
+    @Override
     public void showInfo()
     {
         System.out.println("Circle(x = "+ getX() + ", y = " + getY() + ", R = " + R + ")");

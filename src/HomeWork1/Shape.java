@@ -27,6 +27,7 @@ public abstract class Shape
     public int getY() {
         return y;
     }
+    public abstract double square();
 
     public void showInfo()
     {

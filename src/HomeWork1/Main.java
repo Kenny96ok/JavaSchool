@@ -1,6 +1,7 @@
 package HomeWork1;
 
-import java.io.Console;
+import java.awt.List;
+import java.util.ArrayList;
 
 public class Main {
 
@@ -48,15 +49,22 @@ public class Main {
     }
     public static void main(String[] args) {
         //1
-        int[] mas={2,5,4,3,1};
+        /*int[] mas={2,5,4,3,1};
         printMas(mas);
         bubbleSorter(mas);
         printMas(mas);
-        System.out.println("Искомый элемент под индексом " + binSearch(mas,3));
+        System.out.println("Искомый элемент под индексом " + binSearch(mas,3));*/
 
         //2
-        Circle c1=new Circle(10,10,5);
-        c1.showInfo();
-        c1.showInfo();
+        ArrayList<Shape> Shapes=new ArrayList<>(4);
+        Shapes.add(new Circle(10,10,5));
+        Shapes.add(new Rect(10,10,15,20));
+        Shapes.add(new Triangle(1,1,4,6,5,10));
+        Shapes.add(new Square(10,10,10));
+        for (Shape elem:Shapes)
+        {
+            elem.showInfo();
+            System.out.println("Площадь:" + elem.square());
+        }
     }
 }
