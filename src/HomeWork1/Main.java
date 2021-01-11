@@ -1,18 +1,18 @@
 package HomeWork1;
 
-import java.awt.List;
 import java.util.ArrayList;
+
 
 public class Main {
 
-    public static void printMas(int mas[])
+    public static void printMas(int[] mas)
     {
         for (int elem:mas) {
             System.out.print(elem+" ");
         }
         System.out.println();
     }
-    public static void bubbleSorter(int mas[])
+    public static void bubbleSorter(int[] mas)
     {
         for (int out = mas.length- 1; out >= 1; out--)
         {
@@ -26,7 +26,7 @@ public class Main {
             }
         }
     }
-    public static int binSearch(int mas[], int k)
+    public static int binSearch(int[] mas, int k)
     {
         int i = -1;
         if (mas != null) {
@@ -48,12 +48,12 @@ public class Main {
         return i;
     }
     public static void main(String[] args) {
-        //1
-        /*int[] mas={2,5,4,3,1};
+        /*//1
+        int[] mas={2,5,4,3,1};
         printMas(mas);
         bubbleSorter(mas);
         printMas(mas);
-        System.out.println("Искомый элемент под индексом " + binSearch(mas,3));*/
+        System.out.println("Искомый элемент под индексом " + binSearch(mas,3));
 
         //2
         ArrayList<Shape> Shapes=new ArrayList<>(4);
@@ -65,6 +65,11 @@ public class Main {
         {
             elem.showInfo();
             System.out.println("Площадь:" + elem.square());
-        }
+        }*/
+
+        //3
+        Temperature temp=new Temperature('C',-4);
+        temp.showTemperature();
+        System.out.println(TempConverter.convertCelToFahr(-4)+" K");
     }
 }
