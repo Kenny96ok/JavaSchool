@@ -19,7 +19,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         //Имеется список парка машин Car(String model, String type).
         // Необходимо разбить его на списки сгруппированные по type.
-        List<Car> list = new ArrayList<Car>();
+        /*List<Car> list = new ArrayList<Car>();
         FileReader reader = new FileReader(".//src//HomeWork2//file.txt");
         Scanner scanner = new Scanner(reader);
         while (scanner.hasNext()) {
@@ -42,7 +42,18 @@ public class Main {
                 System.out.print(model + " ");
             }
             System.out.println();
-        }
+        }*/
 
+        //Задание 1: Подсчитайте количество различных слов в файле.
+        HashSet<String> words = new HashSet<String>();
+        FileReader reader = new FileReader(".//src//HomeWork2//file.txt");
+        Scanner scanner = new Scanner(reader);
+        int count=0;
+        while (scanner.hasNext()) {
+            words.add(scanner.next());
+            count++;
+        }
+        System.out.println("Слов в файле: "+count+", а различных: "+words.size());
+        reader.close();
     }
 }
