@@ -3,6 +3,7 @@ package HomeWork2;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
+import java.util.function.BiConsumer;
 
 public class Main {
 
@@ -45,9 +46,10 @@ public class Main {
         }
         System.out.println("Слов в файле: "+count+", а различных: "+words.size());
         reader.close();*/
+
         //Задание 2: Выведите на экран список различных слов файла, отсортированный по возрастанию их длины
         // (компаратор сначала по длине слова, потом по тексту).
-        Comparator<Word> wordLengthComparator = new WordLengthComparator();
+        /*Comparator<Word> wordLengthComparator = new WordLengthComparator();
         Comparator<Word> wordComparator = new WordComparator();
         TreeSet<Word> wordsSortByLength=new TreeSet<>(wordLengthComparator);
         TreeSet<Word> sortedWords = new TreeSet<>(wordComparator);
@@ -69,6 +71,27 @@ public class Main {
         {
             System.out.print(word.word + " ");
         }
-        System.out.println();
+        System.out.println();*/
+
+        //Задание 3: Подсчитайте и выведите на экран сколько раз каждое слово встречается в файле.
+        HashMap<String, Integer> wordsAndTheirCounts = new HashMap<>();
+        FileReader reader = new FileReader(".//src//HomeWork2//file.txt");
+        Scanner scanner = new Scanner(reader);
+        String temp;
+        while (scanner.hasNext())
+        {
+            temp=scanner.next();
+            if(wordsAndTheirCounts.containsKey(temp))
+            {
+                wordsAndTheirCounts.replace(temp, wordsAndTheirCounts.get(temp)+1);
+            }
+            else
+            {
+                wordsAndTheirCounts.put(temp,1);
+            }
+        }
+        for (Map.Entry<String,Integer> word: wordsAndTheirCounts.entrySet()) {
+            System.out.println(word.getKey() + " " + word.getValue());
+        }
     }
 }
