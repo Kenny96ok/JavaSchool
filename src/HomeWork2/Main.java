@@ -74,7 +74,7 @@ public class Main {
         System.out.println();*/
 
         //Задание 3: Подсчитайте и выведите на экран сколько раз каждое слово встречается в файле.
-        HashMap<String, Integer> wordsAndTheirCounts = new HashMap<>();
+        /*HashMap<String, Integer> wordsAndTheirCounts = new HashMap<>();
         FileReader reader = new FileReader(".//src//HomeWork2//file.txt");
         Scanner scanner = new Scanner(reader);
         String temp;
@@ -92,6 +92,22 @@ public class Main {
         }
         for (Map.Entry<String,Integer> word: wordsAndTheirCounts.entrySet()) {
             System.out.println(word.getKey() + " " + word.getValue());
+        }*/
+
+        //Задание 4: Выведите на экран все строки файла в обратном порядке.
+        FileReader reader = new FileReader(".//src//HomeWork2//file.txt");
+        Scanner scanner = new Scanner(reader);
+        ArrayDeque<String> strings=new ArrayDeque<>();
+        String temp;
+        while (scanner.hasNext())
+        {
+            temp=scanner.nextLine();
+            strings.addFirst(new StringBuffer(temp).reverse().toString());
+        }
+        reader.close();
+        for(String string:strings)
+        {
+            System.out.println(string);
         }
     }
 }
