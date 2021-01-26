@@ -1,9 +1,6 @@
 package HomeWork2;
 
-import java.io.FileReader;
 import java.io.IOException;
-import java.util.*;
-import java.util.function.BiConsumer;
 
 public class Main {
 
@@ -95,7 +92,7 @@ public class Main {
         }*/
 
         //Задание 4: Выведите на экран все строки файла в обратном порядке.
-        FileReader reader = new FileReader(".//src//HomeWork2//file.txt");
+        /*FileReader reader = new FileReader(".//src//HomeWork2//file.txt");
         Scanner scanner = new Scanner(reader);
         ArrayDeque<String> strings=new ArrayDeque<>();
         String temp;
@@ -108,6 +105,17 @@ public class Main {
         for(String string:strings)
         {
             System.out.println(string);
+        }*/
+
+        //Задание 5: Реализуйте свой Iterator для обхода списка в обратном порядке.
+        MyList<String> myList = new MyList<>();
+        myList.add("First");
+        myList.add("Second");
+        myList.add("Third");
+        myList.add("Fourth");
+        myList.add("Five");
+        for (String elem :myList) {
+            System.out.print(elem +" ");
         }
     }
 }
